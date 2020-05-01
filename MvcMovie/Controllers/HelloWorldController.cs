@@ -16,9 +16,11 @@ namespace MvcMovie.Controllers
       return View();
     }
 
-    public string Welcome(string name, int num, int id = 34)
+    public IActionResult Welcome(string name, int num = 1)
     {
-      return $"{name}, {num}, {id}";
+      ViewData["Message"] = name;
+      ViewData["Num"] = num;
+      return View();
     }
   }
 }
