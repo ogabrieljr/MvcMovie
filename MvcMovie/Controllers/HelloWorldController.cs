@@ -11,9 +11,9 @@ namespace MvcMovie.Controllers
 {
   public class HelloWorld : Controller
   {
-    public string Index()
+    public IActionResult Index()
     {
-      return "Hello World";
+      return View();
     }
 
     public string Welcome(string name, int num, int id = 34)
